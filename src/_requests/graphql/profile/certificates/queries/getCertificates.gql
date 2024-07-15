@@ -1,0 +1,22 @@
+query getCertificates($filter: GenericFilterRequestCertificateGetAllInputType!) {
+  getCertificates(filter: $filter) {
+    listDto {
+      items {
+        id
+        credentialDoesExpire
+        issueDate
+        expirationDate
+        credentialID
+        credentialUrl
+        certificateName {
+          id
+          title
+        }
+        issuingOrganization{
+          id
+          title
+        }
+      }
+    }
+  }
+}

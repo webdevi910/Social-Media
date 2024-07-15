@@ -1,0 +1,31 @@
+query getSocialPost($filter: GenericFilterRequestSocialPostReqType!){
+    getSocialPost(filter:$filter ) {
+    listDto {
+      items {
+        id
+        body
+        ownerUserId
+        audience
+        status
+        isDeleted
+        location
+        tagIds
+        mentionedUserIds
+        videoUrls
+        pictureUrls
+        createdDateTime
+        firstName
+        fullName
+        lastName
+        userName
+        userAvatarUrl
+        countOfComments
+        countOfLikes
+        countOfShared
+        countOfViews
+      }
+      count
+    }
+    isSuccess
+  }
+}

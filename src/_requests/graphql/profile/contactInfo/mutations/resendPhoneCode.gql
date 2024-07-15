@@ -1,0 +1,6 @@
+mutation resendPhoneCode($filter: GenericMutationRequestResendPhoneNumberCodeInputType!) {
+  resendPhoneCode(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

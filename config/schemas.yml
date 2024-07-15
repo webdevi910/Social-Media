@@ -1,0 +1,13 @@
+overwrite: true
+schema:
+  - ${NEXT_PUBLIC_GQL_COGNITO_SCHEMA}
+  - ${NEXT_PUBLIC_GQL_PROFILE_SCHEMA}
+  - ${NEXT_PUBLIC_GQL_POST_SCHEMA}
+  - ${NEXT_PUBLIC_GQL_UPLOAD_SCHEMA}
+  - ${NEXT_PUBLIC_GQL_LOCALITY_SCHEMA}
+generates:
+  ./src/@types/sections/serverTypes.ts:
+    plugins:
+      - typescript
+    config:
+      useTypeImports: true

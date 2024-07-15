@@ -1,0 +1,68 @@
+query getUser($filter: GenericFilterRequestUserInputType! ){
+  getUser(filter: $filter) {
+    listDto {
+      items {
+        userType
+        organizationUserDto {
+          id
+          fullName
+          coverUrl
+          avatarUrl
+          email
+          joinDateTime
+          organizationUserType
+          size
+          establishmentDate
+          joinAudience
+          placeAudience
+          sizeAudience
+          establishmentDateAudience
+          groupCategoryAudience
+          bio
+        }
+        
+        personDto {
+          id
+          firstName
+          lastName
+          fullName
+          phoneNumber
+          email
+          coverUrl
+          avatarUrl
+          headline
+          birthday
+          gender
+          currnetCity {
+            id
+            personId
+            cityId
+            locationType
+            audience
+            city {
+              id
+              name
+              placeId
+              countryId
+            }
+          }
+          hometown {
+            id
+            personId
+            cityId
+            locationType
+            audience
+            city {
+              id
+              name
+              placeId
+              countryId
+            }
+          }
+          joinDateTime
+          joinAudience
+        }
+      }
+    }
+  }
+}

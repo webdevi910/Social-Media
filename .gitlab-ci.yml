@@ -1,0 +1,14 @@
+stages:
+  - deploy
+
+Deploy_Dev:
+  stage: deploy
+  only:
+    - staging
+  script:
+    #- cp $ENV_STG .env
+    - docker-compose -f docker-compose-develop.yml build dev-ssr
+    - docker-compose -f docker-compose-develop.yml kill dev-ssr
+    - docker-compose -f docker-compose-develop.yml up -d dev-ssr
+  tags:
+    - dev

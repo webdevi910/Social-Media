@@ -1,0 +1,12 @@
+mutation singIn($data: GenericMutationRequestLoginInputType!) {
+  login(login: $data) {
+    listDto {
+      items {
+        token
+        refreshToken
+        expiry
+      }
+    }
+    isSuccess
+  }
+}
